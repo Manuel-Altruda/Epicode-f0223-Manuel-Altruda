@@ -1,0 +1,45 @@
+
+img{
+    max-width: 100%;
+}
+
+.p3{
+    color: darkgreen;
+}
+
+@font-face {
+    font-family: FontRubato;
+    src: url(../font/Roboto-Light.ttf) format("opentype"),
+        url(../font/Roboto-Light.ttf) format('truetype');
+}
+
+.img-focaccia{
+    border-radius: 10px;
+}
+
+h1{
+   font-family: FontRubato, sans-serif;
+}
+
+p{
+    font-family: FontRubato, sans-serif;
+}
+
+.p1{
+    font-family: FontRubato, sans-serif;
+}
+
+.p2{
+    font-family: FontRubato, sans-serif;
+    color: grey;
+}
+
+.features{
+    font-family: FontRubato, sans-serif;
+    color: red
+}
+
+.link a{
+    font-family: FontRubato, sans-serif;
+    color: #00ccff;
+}
