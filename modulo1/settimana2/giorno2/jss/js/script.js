@@ -50,7 +50,7 @@ console.log(somma);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
- /* name = "Manuel";
+ /* name = "Altruda";
   console.log(name);
 
 /* ESERCIZIO 6
