@@ -114,7 +114,7 @@ if (n != 5) {
 
     let totaleCarrello = 120;
     let totaleCosto = 10;
-    let promo = 0.20
+    let promo = 0.8
     
         if (totaleCarrello > 50) {
             
@@ -130,7 +130,7 @@ if (n != 5) {
 
     let totaleCarrello = 40;
     let totaleCosto = 10;
-    let promo = 0.20
+    let promo = 0.8
 
     if (totaleCarrello > 50) {
             
