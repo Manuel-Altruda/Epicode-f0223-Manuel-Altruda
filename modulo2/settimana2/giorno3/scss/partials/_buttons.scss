@@ -1,0 +1,59 @@
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button--primary {
+    background-color: #fff;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+  
+    &:hover {
+      background-color: $color-primary;
+      color: #fff;
+    }
+  }
+  
+  
+  .button--secondary {
+    background-color: $color-secondary;
+    color: #fff;
+  
+    &:hover {
+      background-color: darken($color-secondary, 10%);
+    }
+  }
+  
+  .button--tertiary {
+    background-color: #fff;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+  
+    &:hover {
+      background-color: $color-primary;
+      color: #fff;
+    }
+  }
+
+  //button Hero
+
+  .button-hero {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $color-hero-two;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
