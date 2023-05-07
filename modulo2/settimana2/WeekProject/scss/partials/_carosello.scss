@@ -1,0 +1,42 @@
+
+
+.carousel-indicators {
+    bottom: 2px;
+}
+
+main {
+    .carousel-control-next {
+        right: -123px;
+    }
+
+    #abs {
+        position: absolute;
+        left: -100px;
+    }
+
+    .carousel-control-prev {
+        left:-123px;
+    }
+
+    .carousel-inner {
+        padding: 3rem;
+
+        .row {
+           
+
+            .col {
+                padding: 1px;
+
+
+            }
+
+            img {
+                &:hover {
+                    scale: (1.2);
+                    box-shadow: 1px 1px 20px 8px rgb(71, 21, 78);
+
+                }
+            }
+        }
+    }
+}

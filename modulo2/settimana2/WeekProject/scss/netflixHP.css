@@ -1,0 +1,50 @@
+body {
+  background-color: #1A1A1A;
+}
+
+nav {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.navbar-brand img {
+  width: 100px;
+}
+
+
+
+li .profile-img {
+  width: 35px;
+}
+
+main #iconRightTop .svg-container {
+  padding: 5px 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+nav img {
+  width: 15%;
+}
+
+.carousel-indicators {
+  bottom: 2px;
+}
+
+main .carousel-control-next {
+  right: -123px;
+}
+main .carousel-control-prev {
+  left: -123px;
+}
+main .carousel-inner {
+  padding: 3rem;
+}
+main .carousel-inner .row .col {
+  padding: 1px;
+}
+main .carousel-inner .row img:hover {
+  scale: 1.2;
+  box-shadow: 1px 1px 20px 8px rgb(71, 21, 78);
+}/*# sourceMappingURL=netflixHP.css.map */
