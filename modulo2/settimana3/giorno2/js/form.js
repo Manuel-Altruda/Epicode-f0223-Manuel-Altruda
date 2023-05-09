@@ -1,10 +1,10 @@
-// Recupera il valore precedentemente salvato dal LocalStorage, se presente
+// Recupero il valore precedentemente salvato dal LocalStorage, se presente
 const savedName = localStorage.getItem('name');
 if (savedName) {
   document.getElementById('savedName').textContent = 'Il tuo nome salvato è: ' + savedName;
 }
 
-// Aggiungi l'evento al pulsante Salva
+// Aggiungo l'evento al pulsante Salva
 const saveBtn = document.getElementById('saveBtn');
     saveBtn.addEventListener('click', function() {
     const name = document.getElementById('name').value;
@@ -12,14 +12,14 @@ const saveBtn = document.getElementById('saveBtn');
     document.getElementById('savedName').textContent = 'Il tuo nome salvato è: ' + name;
 });
 
-// Aggiungi l'evento al pulsante Rimuovi
+// Aggiungo l'evento al pulsante Rimuovi
 const clearBtn = document.getElementById('clearBtn');
     clearBtn.addEventListener('click', function() {
     localStorage.removeItem('name');
     document.getElementById('savedName').textContent = '';
 });
 
-// Crea un contatore che tenga conto del tempo trascorso utilizzando sessionStorage
+// Creo un contatore che tenga conto del tempo trascorso utilizzando sessionStorage
 let counter = sessionStorage.getItem('counter') || 0;
     setInterval(function() {
     counter++;
