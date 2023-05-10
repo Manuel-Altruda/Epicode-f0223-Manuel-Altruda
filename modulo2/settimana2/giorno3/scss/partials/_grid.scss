@@ -1,0 +1,22 @@
+.grid {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+  
+    .grid__item {
+        background-color: #fff;
+        border-top:solid 2px $color-hero-one;
+        padding: 30px;
+        text-align: center;
+        
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+      }
+    }
+  }

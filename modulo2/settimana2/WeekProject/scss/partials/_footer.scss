@@ -1,0 +1,23 @@
+footer {
+    border-top: 2px solid black;
+    a {
+        color: $txt-secondary;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .links-container {
+        width: max-content;
+    }
+
+    p {
+        font-size: 0.9em;
+        color: $txt-secondary;
+    }
+
+    svg {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,89 @@
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1590px;
+    padding: 113px 20px;
+    margin: 0 auto;
+  }
+  
+  .postit {
+    width: 316px;
+    height: 244px;
+    margin: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    font-family: 'Indie Flower';
+    font-style: italic;
+    font-display: swap;
+    box-shadow: 2px 5px 9px 0px rgba(0,0,0,0.47), 
+    inset 0px -33px 31px -13px rgba(0,0,0,0.47);
+    margin: 5px 20px;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  p {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 90px;
+    font-size: 1.1em;
+  }
+  
+  .yellow {
+    background-color: rgb(242, 242, 198);
+    transform: rotate(-5deg);
+    transition: all 0.5s linear;
+  }
+  
+  .green {
+    background-color:  rgb(185, 255, 180);
+    transform: rotate(6deg);
+    transition: all 0.5s linear;
+  }
+  
+  .purple {
+    background-color: rgb(188, 143, 255);
+    transform: rotate(-7deg);
+    transition: all 0.5s linear;
+  }
+  
+  .yellow:hover {
+    transform: rotate(0deg) scale(1.4);
+    box-shadow: 10px 5px 9px 0px black, 
+    inset 0px -33px 31px -13px rgb(50, 49, 49);
+    z-index: 1;
+}
+
+.green:hover {
+    transform: rotate(0deg) scale(1.4);
+    box-shadow: 10px 5px 9px 0px black, 
+    inset 0px -33px 31px -13px  rgb(50, 49, 49);
+    z-index: 1;
+}
+
+.purple:hover {
+    transform: rotate(0deg) scale(1.4);
+    box-shadow: 10px 15px 9px 5px black, 
+    inset 0px -33px 31px -13px  rgb(50, 49, 49);
+    z-index: 1;
+}
