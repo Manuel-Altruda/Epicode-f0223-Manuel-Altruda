@@ -5,7 +5,6 @@ let addressContent = new URLSearchParams(window.location.search);
 let productId = addressContent.get("productId");
 
 
-
 const getProducts = function () {
     fetch(striveUrl + productId, {
         headers: {
@@ -44,18 +43,17 @@ const getProducts = function () {
               </div>
       
               <div class="description">
-                <h3>BENEFITS</h3>
+                <h3>Descrizione del prodotto</h3>
                 <p>${product.description}</p>
               </div>
-              <button class="buy--btn">Aggiungi al carrello</button>
-            </div>
-            `;
-        //    <img class="rounded-2 mt-2" src="${product.imageUrl}">
-        //         // <h2 class="mt-3">${product.name}</h2>
-        //         // <h4>Brand: ${product.brand}</h4>
-        //         // <p class="mt-3">Description: ${product.description}</p>
-        //         // <p class="mb-0">Price: ${product.price}$</p>
+                <button class="buy--btn" onclick="addToCart('${product._id}', '${product.name}', ${product.price})">Aggiungi al carrello</button>
                 
+              </div>
+              </section>
+            `;
+            
+
+            
         })
         .catch((err) => {
             console.log(err);
@@ -65,3 +63,61 @@ const getProducts = function () {
 window.onload = function () {
     getProducts();
 };
+  function addToCart(productId, productName, productPrice) {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    let existingItem = cartItems.find((item) => item.productId === productId);
+
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      let newItem = {
+        productId: productId,
+        name: productName,
+        price: productPrice,
+        quantity: 1
+      };
+      cartItems.push(newItem);
+    }
+
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    updateCartDropdown();
+  }
+
+  function removeFromCart(productId) {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    let updatedItems = cartItems.filter((item) => item.productId !== productId);
+
+    localStorage.setItem("cartItems", JSON.stringify(updatedItems));
+    updateCartDropdown();
+  }
+
+  function updateCartDropdown() {
+    let cartDropdown = document.getElementById("cartDropdown");
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    cartDropdown.innerHTML = "";
+
+    if (cartItems.length === 0) {
+      cartDropdown.innerHTML = "<p>Il carrello è vuoto</p>";
+    } else {
+      let cartList = document.createElement("ul");
+
+      cartItems.forEach((item) => {
+        let cartItem = document.createElement("li");
+        cartItem.textContent = `${item.name} x ${item.quantity}`;
+        
+        let removeButton = document.createElement("button");
+        removeButton.textContent = "x";
+        removeButton.setAttribute("data-product-id", item.productId);
+        removeButton.addEventListener("click", (event) => {
+        let productId = event.target.getAttribute("data-product-id");
+        removeFromCart(productId);
+        });
+        
+        cartItem.appendChild(removeButton);
+        cartList.appendChild(cartItem);
+      });
+
+      cartDropdown.appendChild(cartList);
+    }
+  }

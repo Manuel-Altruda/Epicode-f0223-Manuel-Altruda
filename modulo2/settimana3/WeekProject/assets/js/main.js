@@ -37,17 +37,15 @@ const getProducts = function () {
                         ${product.price}€
                     </div>
                     </div>
-                    <a href="./backOffice.html?productId=${product._id}" class="btn btn-danger">MODIFICA</a>
                     <a href="./details.html?productId=${product._id}" class="btn btn-primary py-1">Scopri di più</a>
+                    <a href="./backOffice.html?productId=${product._id}" class="btn btn-danger">MODIFICA</a>
                     </div>
                 </div>
             </div>
             </div>
             </div>
          `
-
-         ///////////
-                let rowReference = document.getElementById('products-container') 
+            let rowReference = document.getElementById('products-container') 
                 rowReference.innerHTML += colProduct
             })
         })
@@ -61,36 +59,3 @@ window.onload = () => {
 
     getProducts()
 }
-
-
-//CARDS JS
-
-
-//  <div class="col-12 col-md-4">
-//            <div class="card">
-//             <img src="${product.imageUrl}" class="card-img-top" alt="Img"/>
-//              <div class="card-body">
-//                <h5 class="card-title">${product.name}</h5>
-//                <p class="card-text">
-//                  ${product.description}
-//                </p>
-//                <p> ${product.brand}€</p>
-//                <p> ${product.price}€</p>
-//                <a href="./backOffice.html?productId=${product._id}" class="btn btn-primary">MODIFICA</a>
-//              </div>
-//            </div>
-//          </div>
-
-//2 metodo
-/* <div class="centered col-12 col-md-4">
-                <div class="cards">
-                  <div class="card">
-                    <div class="border"></div>
-                    <div class="content"><img src="${product.imageUrl}" class="card-img-top" alt="Img""/>
-                      <h2>${product.name}</h2>
-                      <p>${product.description}</p>
-                      <p>${product.brand}€</p>
-                      <p>${product.price}€</p>
-                      <a href="./backOffice.html?productId=${product._id}" class="btn btn-primary">MODIFICA</a>
-                    </div>
-                  </div> */
