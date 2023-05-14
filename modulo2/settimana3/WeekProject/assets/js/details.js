@@ -1,6 +1,5 @@
 const striveUrl = "https://striveschool-api.herokuapp.com/api/product/";
-const key =
-    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlNDg0Mjg4Zjc0MDAwMTQyODc4ZWUiLCJpYXQiOjE2ODM5MDA0ODIsImV4cCI6MTY4NTExMDA4Mn0.Gx0EWh1OD9-zI_Ti0t691R54i6doihF1bHfoLFHotW0";
+const key ="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlNDg0Mjg4Zjc0MDAwMTQyODc4ZWUiLCJpYXQiOjE2ODM5MDA0ODIsImV4cCI6MTY4NTExMDA4Mn0.Gx0EWh1OD9-zI_Ti0t691R54i6doihF1bHfoLFHotW0";
 let addressContent = new URLSearchParams(window.location.search);
 let productId = addressContent.get("productId");
 
@@ -51,9 +50,6 @@ const getProducts = function () {
               </div>
               </section>
             `;
-            
-
-            
         })
         .catch((err) => {
             console.log(err);
@@ -63,12 +59,14 @@ const getProducts = function () {
 window.onload = function () {
     getProducts();
 };
-  function addToCart(productId, productName, productPrice) {
-    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    let existingItem = cartItems.find((item) => item.productId === productId);
 
-    if (existingItem) {
-      existingItem.quantity++;
+
+  function addToCart(productId, productName, productPrice) {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || []; // se il prodotto non esiste nel carrello lo inizializzo con un'array vuoto nel localStorage
+    let itemPresenti = cartItems.find((item) => item.productId === productId);
+
+    if (itemPresenti) {
+      itemPresenti.quantity++;
     } else {
       let newItem = {
         productId: productId,
@@ -100,7 +98,7 @@ window.onload = function () {
     if (cartItems.length === 0) {
       cartDropdown.innerHTML = "<p>Il carrello è vuoto</p>";
     } else {
-      let cartList = document.createElement("ul");
+      let cartList = document.createElement("ul"); // da qui in poi comincio a creare una lista dove poter inserire gli articoli nel carrello
 
       cartItems.forEach((item) => {
         let cartItem = document.createElement("li");
