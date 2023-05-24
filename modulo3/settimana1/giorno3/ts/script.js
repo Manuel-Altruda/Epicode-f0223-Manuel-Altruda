@@ -30,7 +30,22 @@ class lavoratoreAutonomoTipoB extends lavoratoreAutonomo {
     }
 }
 
- // Funzione chiamata al clic del pulsante "Calcola"
+// ora vado ad usare le classi
+const lavoratoreA = new lavoratoreAutonomoTipoA(1, 50000, 5000, 10000);
+console.log("Lavoratore A:");
+console.log("Tasse INPS:", lavoratoreA.getTasseInps());
+console.log("Tasse IRPEF:", lavoratoreA.getTasseIrpef());
+console.log("Reddito Annuo Netto:", lavoratoreA.getRedditoAnnuoNetto());
+console.error("====================SVILUPPO IN CONSOLE===============================");
+const lavoratoreB = new lavoratoreAutonomoTipoB(2, 70000, 6000, 12000);
+console.log("Lavoratore B:");
+console.log("Tasse INPS:", lavoratoreB.getTasseInps());
+console.log("Tasse IRPEF:", lavoratoreB.getTasseIrpef());
+console.log("Reddito Annuo Netto:", lavoratoreB.getRedditoAnnuoNetto());
+
+console.error("====================SVILUPPO IN HTML===============================");
+
+// Funzione chiamata al clic del pulsante "Calcola"
 function calcolaTasse() {
     const codredd = Number(document.getElementById('codredd').value);
     const redditoAnnuoLordo = (document.getElementById('redditoAnnuoLordo').value);
@@ -62,18 +77,3 @@ function calcolaTasse() {
     document.getElementById('tasseInps').value = '';
     document.getElementById('tasseIrpef').value = '';
 }
-
-// ora vado ad usare le classi
-const lavoratoreA = new lavoratoreAutonomoTipoA(1, 50000, 5000, 10000);
-console.log("Lavoratore A:");
-console.log("Tasse INPS:", lavoratoreA.getTasseInps());
-console.log("Tasse IRPEF:", lavoratoreA.getTasseIrpef());
-console.log("Reddito Annuo Netto:", lavoratoreA.getRedditoAnnuoNetto());
-console.error("====================SVILUPPO IN CONSOLE===============================");
-const lavoratoreB = new lavoratoreAutonomoTipoB(2, 70000, 6000, 12000);
-console.log("Lavoratore B:");
-console.log("Tasse INPS:", lavoratoreB.getTasseInps());
-console.log("Tasse IRPEF:", lavoratoreB.getTasseIrpef());
-console.log("Reddito Annuo Netto:", lavoratoreB.getRedditoAnnuoNetto());
-
-console.error("====================SVILUPPO IN HTML===============================");
