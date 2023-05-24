@@ -26,7 +26,7 @@ abstract class lavoratoreAutonomo {
       const tasseTotali = this.tasseInps + this.tasseIrpef;
       return this.redditoAnnuoLordo - tasseTotali;
     }
-}
+  }
   
 // Definizione delle classi lavoratoreAutonomoTipoA e lavoratoreAutonomoTipoB
 
