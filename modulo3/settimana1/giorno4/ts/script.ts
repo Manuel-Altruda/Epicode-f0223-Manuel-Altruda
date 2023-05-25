@@ -28,7 +28,7 @@ class CapoAbbigliamento {
     mostraPrezzo(): string {
       return `Prezzo: €${this.prezzoIvaInclusa}`;
     }
-  }
+}
   
   // Fetch dei dati dal file JSON
   fetch('Abbigliamento.json')
