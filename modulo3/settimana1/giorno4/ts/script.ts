@@ -26,7 +26,7 @@ class CapoAbbigliamento {
     }
   
     mostraPrezzo(): string {
-      return `Prezzo: €${this.prezzoIvaInclusa}`;
+      return `Prezzo ${this.capo}: €${this.prezzoIvaInclusa}`;
     }
 }
   

@@ -14,7 +14,7 @@ class CapoAbbigliamento {
         this.saldo = data.saldo;
     }
     mostraPrezzo() {
-        return `Prezzo: €${this.prezzoIvaInclusa}`;
+        return `Prezzo ${this.capo}: €${this.prezzoIvaInclusa}`;
     }
 }
 // Fetch dei dati dal file JSON
@@ -29,7 +29,7 @@ fetch('Abbigliamento.json')
     }
     console.log(capiAbbigliamento);
     // Mostra il prezzo di alcuni capi d'abbigliamento
-    const capiDaMostrare = capiAbbigliamento.slice(0, 3); // Scegli i primi 3 capi
+    const capiDaMostrare = capiAbbigliamento.slice(0, 3); // faccio scegliere i primi 3 capi
     for (const capo of capiDaMostrare) {
         console.log(capo.mostraPrezzo());
     }
