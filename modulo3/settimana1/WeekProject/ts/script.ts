@@ -1,8 +1,24 @@
-class Smartphone {
-  private carica: number;
-  private numeroChiamate: number;
-  private costoMinuto: number;
-  private registroChiamate: { id: number, durata: number, dataOra: Date }[];
+interface Telefono {
+  carica: number;
+  numeroChiamate: number;
+  costoMinuto: number;
+  registroChiamate: { id: number, durata: number, dataOra: Date }[];
+
+  ricarica(euro:number):void;
+  numero404(): string;
+  getNumeroChiamate(): number;
+  chiamata(min: number): void;
+  azzeraChiamate(): void;
+  mostraRegistroChiamate(): void;
+  filtraChiamatePerDataOra(dataOra: Date): void;
+}
+
+
+class Smartphone implements Telefono{
+  public carica: number;
+  public numeroChiamate: number;
+  public costoMinuto: number;
+  public registroChiamate: { id: number, durata: number, dataOra: Date }[];
 
   constructor() {
     this.carica = 0;
