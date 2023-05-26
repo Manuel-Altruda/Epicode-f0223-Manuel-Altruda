@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/6da0b09cf8.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body class="bg-dark text-light text-center ">
+
+        <h1 class="py-4">WOW CHE IPHONE :)</h1>
+        <h4 class="my-4">Un programmatore che si veste a caso, si sta Prepa...Random()</h4>
+    <div class="demo">  
+        
+        <div class="demo__phone">
+          <div class="demo__screen-wrapper">
+            <div class="demo__screen">
+              <div class="demo__indicator demo__indicator--time">16:22</div>
+              <div class="demo__indicator demo__indicator--signal">
+                <i class="fas fa-battery-three-quarters"></i>
+              </div>
+              <div class="demo__indicator demo__indicator--battery">
+                <i class="fas fa-battery"></i>
+              </div>
+              <div class="demo__controls">
+                <div class="demo__arrow">
+                  <i class="fa fa-chevron-left"></i>
+                </div>
+                <div class="demo__caption">Iphone The Pezzott</div>
+              </div>
+      
+              <!-- Card 1: Registro chiamate -->
+          <div class="demo__card demo__card--regular">
+            <div class="demo__card-frontside">
+              <div class="demo__card-type">Registro Chiamate</div>
+              <div class="demo__card-body">
+                <div class="demo__card-picture demo__card-picture-telefono"></div>
+                    <div class="demo__card-info">
+                      <div class="demo__card-caption">in entrata</div>
+                      <div class="demo__card-description">in uscita</div>
+                    </div>   
+                </div>
+              <div class="demo__card-bottom">
+                <div class="demo__card-button" onclick="mostraRegistroChiamate()">View Balance</div>
+                <div class="demo__card-time"></div>
+              </div>
+            </div>
+          </div>
+              <!-- Card 2: Numero chiamate + data e ora -->
+          <div class="demo__card demo__card--regular">
+            <div class="demo__card-frontside">
+              <div class="demo__card-type">Numero Chiamate</div>
+              <div class="demo__card-body">
+                <div class="demo__card-picture demo__card-picture-contatti"></div>
+                    <div class="demo__card-info">
+                      <div class="demo__card-caption">chiamate contatti</div>
+                      <div class="demo__card-description">Promemoria: Chiamare Moglie</div>
+                    </div>
+                </div>
+              <div class="demo__card-bottom">
+                <div class="demo__card-button" onclick="mostraNumeroChiamate()">View Balance</div>
+                <div class="demo__card-time"></div>
+              </div>
+            </div>
+          </div>
+              <!-- Card 3: Carica (costo chiamate) -->
+          <div class="demo__card demo__card--regular">
+            <div class="demo__card-frontside">
+              <div class="demo__card-type">Carica (Costo chiamate)</div>
+              <div class="demo__card-body">
+                <div class="demo__card-picture demo__card-picture-costi"></div>
+                    <div class="demo__card-info">
+                      <div class="demo__card-caption">Credito Residuo</div>
+                      <div class="demo__card-description">Hai debiti</div>
+                    </div>    
+                </div>
+              <div class="demo__card-bottom">
+                <div class="demo__card-button" onclick="mostraCarica()">View Balance</div>
+                <div class="demo__card-time"></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo__notch"></div>
+        </div>  
+      </div>
+    
+    <script src="ts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
