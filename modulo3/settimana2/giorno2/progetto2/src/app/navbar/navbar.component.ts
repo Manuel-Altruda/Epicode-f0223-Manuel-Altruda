@@ -11,9 +11,9 @@ export class NavbarComponent {
     return location.pathname == '/';
   }
   ActivePage(): boolean {
-    return location.pathname == '/active';
+    return location.pathname == '/active-posts';
   }
   InactivePage(): boolean {
-    return location.pathname == '/inactive';
+    return location.pathname == '/inactive-posts';
   }
 }
