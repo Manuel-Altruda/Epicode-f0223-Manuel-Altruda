@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">App Angular</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <button class="btn btn-success" [routerLink]="['/']">Home</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger" [routerLink]="['/active']">Post attivi</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger" [routerLink]="['/inactive']">Post Inattivi</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
