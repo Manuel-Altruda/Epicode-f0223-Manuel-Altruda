@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "Primo Post",
+    "description": "Curabitur placerat at tellus at fermentum. Curabitur varius interdum cursus.",
+    "active": true
+  },
+
+  {
+    "id": 2,
+    "title": "Secondo Post",
+    "description": "Curabitur placerat at tellus at fermentum. Curabitur varius interdum cursus.",
+    "active": false
+  },
+
+  {
+    "id": 3,
+    "title": "Terzo Post",
+    "description": "Curabitur placerat at tellus at fermentum. Curabitur varius interdum cursus.",
+    "active": true
+  },
+
+  {
+    "id": 4,
+    "title": "Quarto Post",
+    "description": "Curabitur placerat at tellus at fermentum. Curabitur varius interdum cursus.",
+    "active": false
+  },
+
+  {
+    "id": 5,
+    "title": "Quinto Post",
+    "description": "Curabitur placerat at tellus at fermentum. Curabitur varius interdum cursus.",
+    "active": true
+  }
+]
