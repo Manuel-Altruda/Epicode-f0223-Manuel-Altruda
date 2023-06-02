@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,4 +42,49 @@
             <div id="output"></div>
             
     </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Area Triangolo </title>
+</head>
+    <body>
+
+        <script>
+    
+            function calcoloAreaTriangolo(){
+                var base = document.getElementById("base").value;
+                var altezza = document.getElementById("altezza").value;
+    
+                base = parseInt(base);
+                altezza = parseInt(altezza);
+    
+                var areaTriangolo = (base * altezza) / 2;
+                var risultato = "<br><b>Area Triangolo: </b>" + areaTriangolo;
+                document.getElementById("output").innerHTML = risultato;
+            }
+    
+            </script>
+
+                <p><b>Inserisci la base:</b></p>
+
+                <input type="numero" 
+                name="base" id="base"/>
+    
+                <p><b>Inserisci l'altezza:</b></p>
+                 
+                <input type="numero" 
+                name="altezza" id="altezza"/>
+    
+                <input type="button" value="Calcola"
+                onclick="calcoloAreaTriangolo()"/>
+    
+
+            <div id="output"></div>
+            
+    </body>
+>>>>>>> ff596c00807040fb14a60d577becd26baf5a4f28
 </html>

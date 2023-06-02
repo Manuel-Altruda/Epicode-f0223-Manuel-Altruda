@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .navbar {
     background-color: $color-primary;
     display: flex;
@@ -30,4 +31,38 @@
     &:hover {
       color: $color-secondary;
     }
+=======
+.navbar {
+    background-color: $color-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 50px;
+  }
+  
+  .navbar__logo {
+    display: block;
+    width: 70px;
+    height: auto;
+  }
+  
+  .navbar__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .navbar__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+  
+    &:hover {
+      color: $color-secondary;
+    }
+>>>>>>> ff596c00807040fb14a60d577becd26baf5a4f28
   }
