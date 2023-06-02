@@ -34,7 +34,5 @@ export class InactivePostsPage implements OnInit {
   }
 
 }
-function getPosts() {
-  throw new Error('error');
-}
+
 

@@ -1,0 +1,17 @@
+{
+  "todos": [
+
+    { "id": 1, "title": "Mela", "completed": false },
+
+    { "id": 2, "title": "Pera", "completed": true },
+
+    { "id": 3, "title": "Banana", "completed": false },
+
+    { "id": 4, "title": "Caffè", "completed": false },
+
+    { "id": 5, "title": "Carta Igienica", "completed": true },
+
+    { "id": 6, "title": "Libro", "completed": false }
+
+  ]
+}
