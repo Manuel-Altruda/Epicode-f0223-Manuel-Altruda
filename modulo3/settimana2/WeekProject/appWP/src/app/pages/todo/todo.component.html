@@ -1,11 +1,20 @@
-<h2>Todo</h2>
 
-<button (click)="addTodo()">Aggiungi todo</button>
-
-<ul>
-  <li *ngFor="let todo of todos">
-    {{ todo.title }}
-    <button (click)="removeTodoById(todo.id)">Elimina</button>
-    <button (click)="updateTodoById(todo.id, { completed: true })">Completa</button>
-  </li>
-</ul>
+<div class="container">
+  <h1>Todo</h1>
+  <div class="loading" *ngIf="isLoading">
+    Task in caricamento...
+  </div>
+  <input type="text" (ngModel)="newTodoTitle" placeholder="inserisci il testo">
+  <button (click)="addTodo()" >Add Todo</button>
+  <div class="card-container">
+    <div class="card" *ngFor="let todo of todos">
+      <div class="card-header">
+        <h2>{{ todo.title }}</h2>
+      </div>
+      <div class="card-body">
+        <button (click)="removeTodoById(todo.id)">Rimuovi</button>
+        <button (click)="updateTodoById(todo.id, { completed: false })">aggiungi a completed</button>
+      </div>
+    </div>
+  </div>
+</div>

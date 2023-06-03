@@ -7,11 +7,11 @@
 
     { "id": 3, "title": "Banana", "completed": false },
 
-    { "id": 4, "title": "Caffè", "completed": false },
+    { "id": 4, "title": "Caffè", "completed": true },
 
     { "id": 5, "title": "Carta Igienica", "completed": true },
 
-    { "id": 6, "title": "Libro", "completed": false }
+    { "id": 6, "title": "Libro", "completed": true }
 
   ]
 }

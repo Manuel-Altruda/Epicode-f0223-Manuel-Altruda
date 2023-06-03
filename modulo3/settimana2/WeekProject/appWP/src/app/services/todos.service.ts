@@ -5,21 +5,33 @@ import { Injectable } from '@angular/core';
 })
 export class TodosService {
   private todos: Todo[] = [];
+  private loading = false;
 
   constructor() { }
 
   getAllTodos(): Promise<Todo[]> {
-    return new Promise<Todo[]>((resolve) => {
+    if (this.loading) {
+      return new Promise<Todo[]>((resolve) => {
+        setTimeout(() => {
+          resolve(this.todos);
+
+        }, 2000);
+      });
+    } else {
+
+      return new Promise<Todo[]>((resolve) => {
       setTimeout(() => {
         fetch('/assets/db.json')
           .then(response => response.json())
           .then(data => {
             this.todos = data.todos;
+            this.loading = false;
             resolve(this.todos);
           });
       }, 2000);
     });
   }
+}
 
   addTodo(todo: Todo): Promise<Todo> {
     return new Promise<Todo>((resolve) => {
@@ -27,6 +39,7 @@ export class TodosService {
         const newTodo: Todo = {
           id: this.generateId(),
           title: todo.title,
+          img: todo.img,
           completed: false
         };
         this.todos.push(newTodo);
@@ -68,6 +81,7 @@ export class TodosService {
 }
 
 export interface Todo {
+  img: undefined;
   id: number;
   title: string;
   completed: boolean;

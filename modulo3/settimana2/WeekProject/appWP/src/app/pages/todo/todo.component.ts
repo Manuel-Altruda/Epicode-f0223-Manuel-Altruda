@@ -8,6 +8,9 @@ import { Todo, TodosService } from 'src/app/services/todos.service';
 })
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
+  isLoading: boolean = true;
+  loading: any;
+  newTodoTitle: string = '';
 
   constructor(private todosService: TodosService) { }
 
@@ -17,19 +20,36 @@ export class TodoComponent implements OnInit {
 
   loadTodos(): void {
     this.todosService.getAllTodos()
-      .then(todos => this.todos = todos);
+      .then(todos => {
+
+        this.todos = todos
+        this.isLoading = false;
+
+        setTimeout(() => {
+          this.isLoading = true;
+        }, 2000);
+
+      });
   }
 
   addTodo(): void {
+    if (this.newTodoTitle.trim() === '') {
+      return;
+    }
     const newTodo: Todo = {
       id: 0,
-      title: 'Nuovo todo',
-      completed: false
+      title: this.newTodoTitle,
+      img: undefined,
+      completed: false,
     };
 
     this.todosService.addTodo(newTodo)
+
       .then(todo => {
+
         this.todos.push(todo);
+        this.newTodoTitle = '';
+
       });
   }
 
