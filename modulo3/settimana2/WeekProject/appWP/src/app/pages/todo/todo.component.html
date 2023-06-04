@@ -1,7 +1,9 @@
 
+
+
 <div class="container">
   <h1>Todo</h1>
-  <div class="loading" *ngIf="isLoading">
+  <div class="loading" *ngIf="loading">
     Task in caricamento...
   </div>
   <input type="text" (ngModel)="newTodoTitle" placeholder="inserisci il testo">
@@ -11,9 +13,9 @@
       <div class="card-header">
         <h2>{{ todo.title }}</h2>
       </div>
-      <div class="card-body">
+      <div class="card-body" *ngIf="!loading && todos.length > 0">
         <button (click)="removeTodoById(todo.id)">Rimuovi</button>
-        <button (click)="updateTodoById(todo.id, { completed: false })">aggiungi a completed</button>
+        <button (click)="loadCompletedTodos(todo)">aggiungi a completed</button>
       </div>
     </div>
   </div>

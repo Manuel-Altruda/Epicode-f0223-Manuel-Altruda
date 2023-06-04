@@ -1,15 +1,17 @@
 <div class="container">
   <h1>Completed</h1>
-  <div class="loading" *ngIf="isLoading">
+  <div class="loading" *ngIf="loading">
     Task in caricamento...
   </div>
-  <div class="card-container">
-    <div class="card" *ngFor="let todo of todos">
+  <div *ngIf="!loading && completedTodos.length === 0">
+    Task non trovate.
+  </div>
+  <div class="card-container" *ngIf="!loading && completedTodos.length > 0">
+    <div class="card" *ngFor="let todo of completedTodos">
       <div class="card-header">
         <h2>{{ todo.title }}</h2>
       </div>
       <div class="card-body">
-        <p>{{ todo.img }}</p>
         <button (click)="removeTodoById(todo.id)">Remove</button>
       </div>
     </div>

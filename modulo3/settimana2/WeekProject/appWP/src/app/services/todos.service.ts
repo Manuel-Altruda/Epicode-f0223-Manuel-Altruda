@@ -6,8 +6,29 @@ import { Injectable } from '@angular/core';
 export class TodosService {
   private todos: Todo[] = [];
   private loading = false;
+  completedTodos: Todo[] = [];
 
   constructor() { }
+
+  addTodoToCompleted(id: number): Promise<void> {
+    return new Promise<void>((resolve) => {
+      setTimeout(() => {
+        const todo = this.todos.find(t => t.id === id);
+        if (todo) {
+          todo.completed = true;
+        }
+        resolve();
+      }, 2000);
+    });
+  }
+
+  getAllCompletedTodos(): Promise<Todo[]> {
+    return new Promise<Todo[]>((resolve) => {
+      setTimeout(() => {
+        resolve(this.completedTodos);
+      }, 2000);
+    });
+  }
 
   getAllTodos(): Promise<Todo[]> {
     if (this.loading) {
@@ -39,7 +60,6 @@ export class TodosService {
         const newTodo: Todo = {
           id: this.generateId(),
           title: todo.title,
-          img: todo.img,
           completed: false
         };
         this.todos.push(newTodo);
@@ -81,7 +101,6 @@ export class TodosService {
 }
 
 export interface Todo {
-  img: undefined;
   id: number;
   title: string;
   completed: boolean;

@@ -7,10 +7,10 @@ import { Todo, TodosService } from 'src/app/services/todos.service';
   styleUrls: ['./completati.component.scss']
 })
 export class CompletedComponent implements OnInit {
-
+  completedTodos: Todo[] = [];
   todos: Todo[] = [];
-  isLoading: boolean = true;
-  loading: any;
+  loading: boolean = true;
+
 
   constructor(private todosService: TodosService) { }
 
@@ -19,15 +19,15 @@ export class CompletedComponent implements OnInit {
   }
 
   loadCompletedTodos(): void {
-    this.todosService.getAllTodos()
-     .then(todos => {
+    this.todosService.getAllCompletedTodos()
+     .then(completedTodos => {
 
-        this.todos = todos.filter(todo => todo.completed);
-        this.isLoading = false;
+        this.completedTodos = completedTodos.filter(todo => todo.completed);
+        this.loading = true;
 
         setTimeout(() => {
-          this.isLoading = true;
-        }, 2000);
+          this.loading = false;
+        }, );
 
       });
   }
