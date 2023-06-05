@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Lista Foto</h1>
+  <p>Numero di foto preferite: {{ totalFavorites | async }}</p>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let photo of photos">
+      <div class="card mb-4">
+        <img [src]="photo.thumbnailUrl" class="card-img-top" alt="Foto">
+        <div class="card-body">
+          <h5 class="card-title">{{ photo.title }}</h5>
+          <p class="card-text">ID: {{ photo.id }}</p>
+          <button class="btn btn-primary" (click)="likePhoto(photo.id)">Mi piace</button>
+          <button class="btn btn-danger" (click)="deletePhoto(photo.id)">Elimina</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
