@@ -1,11 +1,23 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NewUserFormComponent } from './users/new-user-form/new-user-form.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { RegisterComponent } from './register/register/register.component';
+import { LoginComponent } from './login/login/login.component';
+import { UserDetailComponent } from './users/user-detail/user-detail.component';
+
 
 const routes: Routes = [
   {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+    path: 'login',
+    loadChildren: () =>
+      import('./login/login.module').then((m) => m.LoginModule),
+      component: LoginComponent,
+  },
+  {
+    path: 'register',
+    loadChildren: () =>
+      import('./register/register.module').then((m) => m.RegisterModule),
+      component: RegisterComponent
   },
   {
     path: 'posts',
@@ -16,12 +28,14 @@ const routes: Routes = [
     path: 'users',
     loadChildren: () =>
       import('./users/users.module').then((m) => m.UsersModule),
+      component: UserDetailComponent
   },
-  { path: 'users/new', component: NewUserFormComponent },
+  { path: 'create-user',
+  component: CreateUserComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}
