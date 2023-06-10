@@ -1,5 +1,11 @@
 {
   "users": [
-
+    {
+      "email": "tikadyg@mailinator.com",
+      "password": "$2a$10$G1DPbOYGE.uNf8X9uRMc7eW5BjlkeHMQ7nUpE03tnsol0D4BCMune",
+      "name": "Judith Sykes",
+      "surname": "Levine",
+      "id": 1
+    }
   ]
 }

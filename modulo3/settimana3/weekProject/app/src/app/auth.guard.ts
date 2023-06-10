@@ -1,10 +1,10 @@
-import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree,} from '@angular/router';
+import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree,} from '@angular/router';
 import { Observable, map, take } from 'rxjs';
 import { AuthService } from './Authservices/auth.service';
 
 
 export class AuthGuard implements CanActivate {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -15,11 +15,11 @@ export class AuthGuard implements CanActivate {
             take(1), map((isLoggedIn) => {
 
               if (isLoggedIn) {
-                this.router.navigate(['/pages', 'dashboard']);
+
                 return true;
+
               }
 
-              this.router.navigate(['/auth']);
               return false;
 
             })
