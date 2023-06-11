@@ -79,7 +79,8 @@
             This field is required.
           </p>
         </div>
-        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">
+        <button type="submit" class="btn btn-primary" [disabled]="!f.valid"
+         [routerLink]="['/pages', 'dashboard']">
           Submit
         </button>
       </form>

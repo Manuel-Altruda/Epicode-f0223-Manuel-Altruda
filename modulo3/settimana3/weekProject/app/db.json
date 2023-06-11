@@ -6,6 +6,41 @@
       "name": "Judith Sykes",
       "surname": "Levine",
       "id": 1
+    },
+    {
+      "email": "dywicoc@mailinator.com",
+      "password": "$2a$10$BDTzsysfM/XZgqgWqa5h3efkoPxRCwPfpqbMKVH.tuGV0OLmc4CQ6",
+      "name": "Lars Nunez",
+      "surname": "Mays",
+      "id": 2
+    },
+    {
+      "email": "tekucadode@mailinator.com",
+      "password": "$2a$10$vjPX4bHkxzwetRLDbXeZjuKE1wmMVighEQ3KgYD9s0dA81IzeY1Ia",
+      "name": "Ashely Stevenson",
+      "surname": "Ballard",
+      "id": 3
+    },
+    {
+      "email": "mukylumy@mailinator.com",
+      "password": "$2a$10$KCkqZw2mUpD6ow/Gf54lDurCDYKPKDcZDDPtSR2gG6jdByIC7xOV.",
+      "name": "Tasha Parrish",
+      "surname": "Salinas",
+      "id": 4
+    },
+    {
+      "email": "zizoxidy@mailinator.com",
+      "password": "$2a$10$Rsao4gee4DFkqK5yqt4ZQ.yi58mHpx3rJqddShWfUw7jHygHEwcFC",
+      "name": "Judah Leblanc",
+      "surname": "Booth",
+      "id": 5
+    },
+    {
+      "email": "mozaben@mailinator.com",
+      "password": "$2a$10$EWTxMLTHsPTWR0PgDZOoj.5zirlBjoXnvvnsgglbkYNLiZBoRbWqe",
+      "name": "Keely Adams",
+      "surname": "Kidd",
+      "id": 6
     }
   ]
 }
