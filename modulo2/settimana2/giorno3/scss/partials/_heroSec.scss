@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .hero {
     background-color: $color-hero-one;
     background-size: cover;
@@ -22,28 +21,3 @@
     height: auto;
   }
 
-=======
-.hero {
-    background-color: $color-hero-one;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120vh;
-  
-    .hero__content {
-      max-width: 50%;
-      margin-right: 50px;
-      margin-left: 50px;
-    }
-}
-
-.hero__image {
-    max-width: 50%;
-    margin-right: 50px;
-    height: auto;
-  }
-
->>>>>>> ff596c00807040fb14a60d577becd26baf5a4f28

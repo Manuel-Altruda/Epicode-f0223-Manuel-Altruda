@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 body {
@@ -42,48 +41,3 @@ body {
     display: block;
     transition-delay: 1.3s;
  }
-=======
-
-
-body {
-  background: greenyellow;
-  color: darkGrey;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-rendering: optimizeLegibility;
-}
-
-.card {
-    width: 45%;
-    height: auto;
-    background-color: rgb(138, 141, 138);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px;
-    border-radius: 12px;
-    min-width: 220px;
-    transition: 0.8s ease-in-out;
- }
- .card {
-    &:hover {
-        scale: (1.1);
-                    box-shadow: 1px 1px 20px 20px rgb(71, 21, 78);
-    }
- }
- img {
-    height: 50%;
-    border-radius: 12px;
- }
- .card-content {
-    font-size: 1.2rem;
-    justify-content: space-around;
-    margin-top: 5px;
-    display: none;
-    transition: 1.3s ease-in-out;
- }
- .card:hover .card-content {
-    display: block;
-    transition-delay: 1.3s;
- }
->>>>>>> ff596c00807040fb14a60d577becd26baf5a4f28

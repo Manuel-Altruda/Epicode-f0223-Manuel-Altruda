@@ -43,11 +43,7 @@ console.log("Tasse INPS:", lavoratoreB.getTasseInps());
 console.log("Tasse IRPEF:", lavoratoreB.getTasseIrpef());
 console.log("Reddito Annuo Netto:", lavoratoreB.getRedditoAnnuoNetto());
 
-<<<<<<< HEAD
-console.error("====================SVILUPPO IN HTML==============================="); 
-=======
 console.error("====================SVILUPPO IN HTML===============================");
->>>>>>> ff596c00807040fb14a60d577becd26baf5a4f28
 
 // Funzione chiamata al clic del pulsante "Calcola"
 function calcolaTasse() {
@@ -81,7 +77,3 @@ function calcolaTasse() {
     document.getElementById('tasseInps').value = '';
     document.getElementById('tasseIrpef').value = '';
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> ff596c00807040fb14a60d577becd26baf5a4f28

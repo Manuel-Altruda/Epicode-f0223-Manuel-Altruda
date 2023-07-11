@@ -1,4 +1,4 @@
-"use strict";
+
 class CapoAbbigliamento {
     constructor(data) {
         this.id = data.id;
@@ -14,11 +14,7 @@ class CapoAbbigliamento {
         this.saldo = data.saldo;
     }
     mostraPrezzo() {
-<<<<<<< HEAD
         return `Prezzo ${this.capo}: €${this.prezzoIvaInclusa}`;
-=======
-        return `Prezzo: €${this.prezzoIvaInclusa}`;
->>>>>>> ff596c00807040fb14a60d577becd26baf5a4f28
     }
 }
 // Fetch dei dati dal file JSON
@@ -33,11 +29,7 @@ fetch('Abbigliamento.json')
     }
     console.log(capiAbbigliamento);
     // Mostra il prezzo di alcuni capi d'abbigliamento
-<<<<<<< HEAD
     const capiDaMostrare = capiAbbigliamento.slice(0, 3); // faccio scegliere i primi 3 capi
-=======
-    const capiDaMostrare = capiAbbigliamento.slice(0, 3); // Scegli i primi 3 capi
->>>>>>> ff596c00807040fb14a60d577becd26baf5a4f28
     for (const capo of capiDaMostrare) {
         console.log(capo.mostraPrezzo());
     }
